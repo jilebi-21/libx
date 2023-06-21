@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Toolbar.Collapsed.Title.Text" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/toolbar_title_text_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Toolbar.Collapsed.Subtitle.Text" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textSize">@dimen/toolbar_subtitle_text_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Toolbar.Expanded.Title.Text" parent="Toolbar.Collapsed.Title.Text">
+        <item name="android:textSize">@dimen/appbar_expanded_title_text_size</item>
+    </style>
+
+    <style name="Toolbar.Expanded.Subtitle.Text" parent="Toolbar.Collapsed.Subtitle.Text">
+        <item name="android:textSize">@dimen/appbar_expanded_subtitle_text_size</item>
+    </style>
+</resources>
