@@ -6,6 +6,7 @@
         <attr name="subtitle" format="string" />
         <attr name="expandable" format="boolean" />
         <attr name="expanded" format="boolean" />
+        <attr name="showDefaultBackIcon" format="boolean" />
         <attr name="navigationIcon" format="reference" />
     </declare-styleable>
 

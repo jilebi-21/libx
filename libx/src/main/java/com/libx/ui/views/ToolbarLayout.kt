@@ -9,6 +9,7 @@ import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -59,6 +60,19 @@ class ToolbarLayout(
             }
         }
 
+    var showDefaultBackIcon: Boolean = false
+        set(value) {
+            field = value
+            if (value) {
+                navigationIcon =
+                    ResourcesCompat.getDrawable(
+                        resources,
+                        R.drawable.ic_chevron_left,
+                        context.theme
+                    )
+            }
+        }
+
     var navigationIcon: Drawable? = null
         set(value) {
             field = value
@@ -90,6 +104,8 @@ class ToolbarLayout(
         expandedSubTitleView = findViewById(R.id.tl_expanded_subtitle)
 
         navigationIcon = typedArray.getDrawable(R.styleable.ToolBarLayout_navigationIcon)
+        showDefaultBackIcon =
+            typedArray.getBoolean(R.styleable.ToolBarLayout_showDefaultBackIcon, false)
         title = typedArray.getString(R.styleable.ToolBarLayout_title)
         subtitle = typedArray.getString(R.styleable.ToolBarLayout_subtitle)
         typedArray.recycle()
