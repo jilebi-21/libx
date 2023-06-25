@@ -58,12 +58,13 @@
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.core.widget.NestedScrollView
+        <com.libx.ui.views.RoundedFrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:cornerRadius="@dimen/radius_xxxl"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <LinearLayout
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -73,8 +74,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical" />
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+            </androidx.core.widget.NestedScrollView>
+        </com.libx.ui.views.RoundedFrameLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <include layout="@layout/toolbar_layout_footer" />

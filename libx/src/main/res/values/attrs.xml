@@ -16,4 +16,17 @@
             <enum name="footer" value="1" />
         </attr>
     </declare-styleable>
+
+    <attr name="cornerRadius" format="dimension" />
+    <attr name="backgroundColor" format="color" />
+
+    <declare-styleable name="RoundedLinearLayout">
+        <attr name="cornerRadius" />
+        <attr name="backgroundColor" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedFrameLayout">
+        <attr name="cornerRadius" />
+        <attr name="backgroundColor" />
+    </declare-styleable>
 </resources>
